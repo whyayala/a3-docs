@@ -50,6 +50,16 @@ apos create apos-app
 
 The CLI will take care of installing dependencies and walk you through creating the first user. You can then skip down to the ["Finishing touches"](#finishing-touches) section. *If you don't want to use the CLI*, or if you want to see other things it does for you, continue on.
 
+::: tip NOTE
+Depending on your mongodb configuration, you may need to provide a connection string with mongodb user credentials for `apos create apos-app` to create the first user. Passing `APOS_MONGODB_URI` to the cli with your mongodb connection string will provide it connection info it will need to authenticate. For example:
+
+``` bash
+APOS_MONGODB_URI=mongodb://dbuser:dbpassword@localhost/ apos create apos-app
+```
+
+Please note that this is an example and you should use valid credentials for a user that currently exists on your database.
+:::
+
 To get started quickly without the CLI, clone the starter repository:
 
 ```bash
